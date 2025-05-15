@@ -1,0 +1,194 @@
+.container {
+     max-width: 800px;
+     margin: 0 auto;
+     padding: 2rem 1rem;
+     background: var(--background-color);
+   }
+   
+   .info {
+     text-align: center;
+     margin-bottom: 2.5rem;
+   }
+   
+   .title {
+     font-size: clamp(2rem, 3vw, 2.5rem);
+     margin-bottom: 1.5rem;
+     color: var(--text-color);
+     font-family: 'Rubik', sans-serif;
+     text-transform: uppercase;
+   }
+   
+   .contactForm {
+     display: flex;
+     flex-direction: column;
+     gap: 1.8rem;
+     max-width: 700px; /* Wider form */
+     margin: 0 auto;
+   }
+   
+   .formGroup {
+     display: flex;
+     flex-direction: column;
+     gap: 0.5rem;
+   }
+   
+   .label {
+     font-weight: 500;
+     color: var(--text-color);
+     font-family: 'Roboto Mono', monospace;
+     font-size: 0.95rem;
+   }
+   
+   .requiredField::after {
+     content: ' *';
+     color: var(--error-color);
+   }
+   
+   .input {
+     padding: var(--form-padding);
+     border: var(--input-border);
+     border-radius: var(--form-border-radius);
+     font-size: 1rem;
+     background: var(--input-bg);
+     color: var(--form-text-color);
+     transition: all var(--transition-speed) ease;
+     font-family: 'Roboto Mono', monospace;
+     width: 100%;
+   }
+   
+   .textarea {
+     padding: var(--form-padding);
+     border: var(--input-border);
+     border-radius: var(--form-border-radius);
+     font-size: 1rem;
+     background: var(--input-bg);
+     color: var(--form-text-color);
+     transition: all var(--transition-speed) ease;
+     font-family: 'Roboto Mono', monospace;
+     width: 100%;
+     min-height: 150px;
+     resize: vertical;
+   }
+   
+   .input:focus,
+   .textarea:focus {
+     outline: none;
+     border: var(--input-focus-border);
+     box-shadow: var(--input-focus-shadow);
+   }
+   
+   .error {
+     border-color: var(--error-color) !important;
+   }
+   
+   .errorMessage {
+     color: var(--error-color);
+     font-size: 0.85rem;
+     margin-top: 0.25rem;
+     font-family: 'Roboto Mono', monospace;
+   }
+   
+   .submitBtn {
+     background: var(--btn-color);
+     color: var(--btn-text-color);
+     padding: 0.8rem 1.5rem;
+     border: var(--btn-border);
+     border-radius: var(--form-border-radius);
+     font-size: 1rem;
+     font-weight: 600;
+     cursor: pointer;
+     transition: all var(--transition-speed) ease;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     font-family: 'Rubik', sans-serif;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 0.5rem;
+     margin-top: 0.5rem;
+   }
+   
+   .submitBtn:hover {
+     opacity: 0.9;
+     transform: translateY(-1px);
+   }
+   
+   .submitBtn:disabled {
+     background: var(--disabled-color);
+     cursor: not-allowed;
+     transform: none;
+   }
+   
+   .spinner {
+     width: 1.2rem;
+     height: 1.2rem;
+     border: 2px solid rgba(255, 255, 255, 0.3);
+     border-radius: 50%;
+     border-top-color: var(--spinner-color);
+     animation: spin 1s linear infinite;
+   }
+   
+   @keyframes spin {
+     to { transform: rotate(360deg); }
+   }
+   
+   .successMessage,
+   .errorAlert {
+     padding: 1rem;
+     border-radius: var(--form-border-radius);
+     margin-top: 1.5rem;
+     display: flex;
+     align-items: center;
+     gap: 0.75rem;
+     font-size: 0.95rem;
+   }
+   
+   .successMessage {
+     background: var(--success-bg);
+     color: var(--success-color);
+     border: 1px solid rgba(39, 174, 96, 0.2);
+   }
+   
+   .errorAlert {
+     background: var(--error-bg);
+     color: var(--error-color);
+     border: 1px solid rgba(231, 76, 60, 0.2);
+   }
+   
+   .icon {
+     width: 1.25rem;
+     height: 1.25rem;
+     flex-shrink: 0;
+   }
+   
+
+   @media (max-width: 768px) {
+     .container {
+       padding: 1.5rem 1rem;
+     }
+     
+     .contactForm {
+       gap: 1.5rem;
+       max-width: 100%;
+     }
+     
+     .title {
+       font-size: 1.8rem;
+     }
+     
+     .submitBtn {
+       padding: 0.7rem 1.2rem;
+       font-size: 0.9rem;
+     }
+   }
+   
+   @media (max-width: 480px) {
+     .title {
+       margin-bottom: 1rem;
+     }
+     
+     .input,
+     .textarea {
+       padding: 0.7rem;
+     }
+   }

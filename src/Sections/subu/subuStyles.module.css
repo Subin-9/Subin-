@@ -1,0 +1,163 @@
+.Container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 30px;
+     text-align: center;
+     height: 100dvh;
+     min-height: 500px;
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 20px;
+     position: relative;
+   }
+   
+   .photoContainer {
+     width: min(310px, 90vw);
+     height: min(330px, 95vw);
+     perspective: 1000px;
+     transform-style: preserve-3d;
+     transition: transform 0.2s ease-out;
+     cursor: pointer;
+     border-radius: 50px;
+     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+     overflow: hidden;
+     position: relative;
+     z-index: 1;
+   }
+   
+   .profilePhoto {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     object-position: center;
+     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+   }
+   
+   .photoContainer:hover .profilePhoto {
+     transform: scale(1.08);
+   }
+   
+   .colormodecontainer {
+     position: absolute;
+     top: 30px;
+     right: 50px;
+     z-index: 10;
+   }
+   
+   .colormode {
+     width: 32px;
+     height: 32px;
+     transition: transform 0.3s ease, opacity 0.2s ease;
+     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+   }
+   
+   .colormode:hover {
+     transform: scale(1.15);
+     opacity: 0.9;
+   }
+   
+   .info {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 20px;
+     max-width: 800px;
+   }
+   
+   .info h1 {
+     line-height: 1.1;
+     margin-bottom: 10px;
+   }
+   
+   .info h2 {
+     font-weight: 500;
+   }
+   
+   .description {
+     max-width: 50ch;
+     line-height: 1.6;
+     font-size: clamp(1rem, 1.8vw, 1.1rem);
+     padding: 0 20px;
+   }
+   
+   span {
+     display: flex;
+     gap: 25px;
+     justify-content: center;
+     margin: 10px 0;
+   }
+   
+   span a img {
+     width: 40px;
+     height: 40px;
+     transition: transform 0.3s ease;
+   }
+   
+   span a:hover img {
+     transform: scale(1.15) rotate(5deg);
+   }
+   
+   button {
+     background-color: var(--btn-color);
+     color: var(--btn-text-color);
+     border: var(--btn-border);
+     border-radius: 25px;
+     width: 140px;
+     height: 55px;
+     font-size: 1.25rem;
+     font-weight: 600;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+     transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+     margin-top: 10px;
+   }
+   
+   button:hover {
+     transform: scale(1.05);
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+   }
+   
+   button:active {
+     transform: translateY(2px) scale(0.98);
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+   }
+   
+   [data-theme='dark'] .photoContainer {
+     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+   }
+   
+   [data-theme='dark'] .colormode {
+     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+   }
+
+   @media (max-width: 768px) {
+     .Container {
+     gap: 20px;
+       padding-top: 60px;
+     }
+     
+     .colormodecontainer {
+       top: 20px;
+       right: 20px;
+     }
+     
+     .info {
+       gap: 15px;
+     }
+     
+     span {
+       gap: 20px;
+     }
+     
+     span a img {
+       width: 36px;
+       height: 36px;
+     }
+}
+
+
+   
+
+
+ 

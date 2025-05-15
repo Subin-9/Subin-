@@ -1,0 +1,115 @@
+:root {
+     --background-color: #fff;
+     --btn-color: #008000;
+     --btn-text-color: #fff;
+     --btn-border: 2px solid rgba(0, 0, 0, 0.1)
+     --project-card-bg: #ffffff00;
+     --text-color: #222;
+     --form-text-color: #555;
+     --footer-text-color: #495057;
+
+     --input-bg: #fff;
+     --input-border: 1px solid #ddd;
+     --input-focus-border: 1px solid #008000;
+     --input-focus-shadow: 0 0 0 2px rgba(0, 128, 0, 0.2);
+     --error-color: #e74c3c;
+     --error-bg: #f8d7da;
+     --success-color: #27ae60;
+     --success-bg: #d4edda;
+     --disabled-color: #95a5a6;
+     --spinner-color: #fff;
+     --form-border-radius: 4px;
+     --form-padding: 0.8rem;
+     --transition-speed: 0.3s;
+
+
+}
+
+     [data-theme = 'dark'] {
+          --background-color: #222;
+          --btn-color: #fff;
+          --btn-text-color: #222;
+          --btn-border: 2px solid rgba(0, 0, 0, 0.15)
+          --project-card-bg: #fff;
+          --text-color: #fff;
+          --form-text-color: #fff;
+          --footer-text-color: #e9ecef;
+          --footer-border-color: #343a40;
+
+          --input-bg: #333;
+          --input-border: 1px solid #444;
+          --input-focus-border: 1px solid #4CAF50;
+          --input-focus-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3);
+          --error-bg: #442222;
+          --success-bg: #224422;
+          --disabled-color: #555;
+          --spinner-color: #222;
+
+     }
+
+     body{
+          background-color: var(--background-color);
+          display: flex;
+          justify-content: center;
+          margin: 0 auto 60px;
+     }
+
+     #root {
+          display: flex;
+          flex-direction: column;
+          gap: 60px; 
+     }
+
+     h1,h2,h3,p {
+          color: var(--text-color);
+          margin: 0;
+          padding: 0;
+     }
+
+     h2,h3,p {
+          font-family: 'Roboto Mono', monospace;
+     }
+
+     h1,h2 {
+          text-transform: uppercase;
+     }
+
+     h2,h3 {
+          font-size: 20px;
+     }
+
+     h1{
+          font-family: 'Rubik', sans-serif;
+          font-size: clamp(2rem, 3vw, 2rem);
+     }
+
+     h2{
+          font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+     }
+
+     p{
+          font-size: 1rem;
+          font-weight: 450;
+     }
+
+     .sectionTitle {
+
+          margin-bottom: 30px;
+          
+     }
+
+     .hover {
+          cursor: pointer;
+     }
+
+     footer {
+          text-align: center;
+          color: var(--footer-text-color);         
+          font-size: 12px; 
+          font-weight: 300; 
+          padding: 10px 0; 
+          margin-top: 20px; 
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+    
